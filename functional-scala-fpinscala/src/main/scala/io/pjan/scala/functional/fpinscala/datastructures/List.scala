@@ -154,7 +154,7 @@ object List {
   def flatMap[A, B](l: List[A])(f: A => List[B]): List[B] = concat(map4(l)(f))
 
   // Exercise 3.21: implement `filter` using `flatMap`
-  def filter[A](l: List[A])(pred: A => Boolean): List[A] =
+  def filter2[A](l: List[A])(pred: A => Boolean): List[A] =
     flatMap(l)(a => if (pred(a)) List(a) else Nil)
 
   // Exercise 3.22: implement a function that takes 2 lists of Ints, and produces a new list of Ints by adding the corresponding elements
