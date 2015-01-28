@@ -123,5 +123,11 @@ object RNG {
         nonNegativeLessThan(n)
     }
 
+  def boolean: Rand[Boolean] =
+    map(int) { i =>
+      if (i < 0 ) true
+      else false
+    }
+
   def rollDie: Rand[Int] = nonNegativeLessThan(6)
 }

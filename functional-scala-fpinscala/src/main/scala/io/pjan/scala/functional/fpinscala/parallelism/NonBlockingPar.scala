@@ -67,7 +67,7 @@ object NonBlockingPar extends Par {
     }
   }
 
-  override def sequence[A](as: List[Par[A]]): Par[List[A]] =
+  override def sequence[A](as: List[Par[A]]): Par[List[A]] = ???
 
   override def parMap[A, B](as: List[A])(f: A => B): Par[List[B]] = ???
 
